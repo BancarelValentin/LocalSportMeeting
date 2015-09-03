@@ -1,0 +1,16 @@
+<resources>
+    <!-- Text -->
+
+
+    <!-- Autre  -->
+    <dimen name="marginTopCardRencontre">10dip</dimen>
+    <dimen name="marginSideCardRencontre">10dip</dimen>
+    <dimen name="hauteurCarteRencontre">75dp</dimen>
+
+    <dimen name="hauteurLogo">100dp</dimen>
+    <dimen name="hauteurLigneMenu">48dp</dimen>
+
+    <dimen name="marge">15dp</dimen>
+    <dimen name="margeAvecFab">100dp</dimen>
+    <dimen name="tailleGrosTitre">20sp</dimen>
+</resources>

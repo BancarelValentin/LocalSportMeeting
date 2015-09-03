@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundWhite"
+    android:gravity="center">
+
+
+
+    <TextView
+        android:id="@+id/textNoNetwork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Pas de connexion internet"
+        android:visibility="gone"
+        android:gravity="center"
+        android:textColor="@color/textColorPrimaryLight"
+        android:textSize="@dimen/tailleGrosTitre"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Réessayez"
+        android:layout_gravity="center"
+        android:id="@+id/retryButton"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/imageProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icone_load"/>
+
+    <TextView
+        android:id="@+id/textProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chargement ..."
+        android:gravity="center"
+        android:textColor="@color/textColorPrimaryLight"
+        android:textSize="@dimen/tailleGrosTitre"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:gravity="center"/>
+
+</LinearLayout>

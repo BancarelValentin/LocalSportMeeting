@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="colorPrimaryDark" type="color">#2196F3</item>
+    <item name="colorPrimary" type="color">#64B5F6</item>
+    <item name="colorGray" type="color">#ffa29b9b</item>
+    <item name="navigationBarColor" type="color">#000000</item>
+    <item name="colorBackgroundWhite" type="color">#ffffffff</item>
+    <item name="colorBlack" type="color">#000000</item>
+    <item name="colorDrawerMenuItemSelected" type="color">#e0e0e0</item>
+
+    //police
+    <item name="textColorPrimaryDark" type="color">#ffffffff</item>
+    <item name="textColorSecondaryDark" type="color">#ff949494</item>
+    <item name="textColorPrimaryLight" type="color">#2196f3</item>
+    <item name="textColorSecondaryLight" type="color">#2196f3</item>
+    <item name="textColorBlack" type="color">#000000</item>
+
+</resources>

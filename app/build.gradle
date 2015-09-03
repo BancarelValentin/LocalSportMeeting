@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+apply plugin: 'jacoco'
+
+android {
+    jacoco {
+        version = '0.6.2.201302030002'
+    }
+    compileSdkVersion 21
+    buildToolsVersion "21.1.0"
+    defaultConfig {
+        applicationId "com.iutclermont.lpmobile.localsportmeeting"
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+            testCoverageEnabled = true
+        }
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+
+}
+
+jacoco {
+    toolVersion = "0.7.1.201405082137"
+}
+
+/*robolectric {
+    // configure the set of classes for JUnit tests
+    include '***//*Test.class'
+    exclude '**//*espresso*//***//*.class'
+
+    // configure max heap size of the test JVM
+    maxHeapSize = '2048m'
+
+    // configure the test JVM arguments
+    jvmArgs '-XX:MaxPermSize=512m', '-XX:-UseSplitVerifier'
+
+    // configure whether failing tests should fail the build
+    ignoreFailures true
+
+    // use afterTest to listen to the test execution results
+    afterTest { descriptor, result ->
+        println "Executing test for {$descriptor.name} with result: ${result.resultType}"
+    }
+}*/
+
+def coverageSourceDirs = [
+        'src/main/java',
+        'src/gen'
+]
+
+
+// Add JaCoCo test reporting to the test task
+// http://chrisjenx.com/gradle-robolectric-jacoco-dagger/
+task jacocoTestReport(type: JacocoReport, dependsOn: "testDebug") {
+    group = "Reporting"
+    description = "Generate Jacoco coverage reports after running tests."
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
+
+    // Class R is used, but usage will not be covered, so ignore this class from report
+    classDirectories = fileTree(
+            dir: './build/intermediates/classes/debug',
+            excludes: ['**/R.class',
+                       '**/R$*.class'
+            ])
+    sourceDirectories = files(coverageSourceDirs)
+    executionData = files('build/jacoco/testDebug.exec')
+}
+
+
+dependencies {
+    compile fileTree(dir: 'Libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:21.0.0'
+    compile 'com.google.android.gms:play-services:6.1.71'
+    compile 'com.android.support:cardview-v7:21.0.0'
+    compile 'com.android.support:recyclerview-v7:21.0.0'
+    compile 'com.getbase:floatingactionbutton:1.1.0'
+    compile project(path: ':backend', configuration: 'android-endpoints')
+}

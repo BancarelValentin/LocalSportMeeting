@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- police -->
+    <dimen name="tailleTitreMenu">15sp</dimen>
+    <dimen name="tailleTitre">12sp</dimen>
+    <dimen name="tailleTitreCarte">12sp</dimen>
+    <dimen name="tailleSousTitre">11sp</dimen>
+    <dimen name="tailleText">10sp</dimen>
+
+    <!-- dimension -->
+    <dimen name="paddingSideScreen">9dp</dimen>
+    </resources>

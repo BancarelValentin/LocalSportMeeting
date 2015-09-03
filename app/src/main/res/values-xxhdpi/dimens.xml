@@ -1,0 +1,13 @@
+<resources><!-- Nexus 5 -->
+
+    <!-- police -->
+    <dimen name="tailleTitreMenu">14sp</dimen>
+    <dimen name="tailleTitre">8sp</dimen>
+    <dimen name="tailleTitreCarte">10sp</dimen>
+    <dimen name="tailleSousTitre">10sp</dimen>
+    <dimen name="tailleText">9sp</dimen>
+
+
+    <!-- dimension -->
+    <dimen name="paddingSideScreen">8dp</dimen>
+</resources>

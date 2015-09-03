@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <View
+        android:id="@+id/barreDecorationMenu"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hauteurLigneMenu"
+        android:gravity="center_vertical"
+        android:textColor="@color/textColorBlack"
+        android:textSize="@dimen/tailleTitreMenu"
+        android:paddingLeft="20dip"/>
+
+
+    
+</LinearLayout>
